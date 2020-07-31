@@ -1,4 +1,6 @@
 body {
+    background: black;
+
     display:grid;
     grid-template-columns: 500px auto 500px;
     grid-template-rows: 100px 700px auto;
@@ -14,16 +16,17 @@ body {
     box-sizing: border-box;
   }
   body * {
-    background: black;
-    color: darkgrey;
+    color: rgb(245, 245, 220);
     border: 2px solid lightslategrey;
     border-radius: 5px;
   }
   
-  header, footer {
-    grid-column: 1 / 4;
-    background: rgb(51, 2, 12);
-  }
+    header, footer {
+        background-image: url("images/plainblack.jpeg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        grid-column: 1 / 4;
+     }
   
   main {
   }
@@ -32,13 +35,17 @@ body {
   }
   
   .left{
-    background: rgb(52, 58, 55);
-    color: darkgrey;
   }
   
   .right {
-    background: rgb(52, 58, 55);
-    color: darkgrey;
+  }
+
+  img {
+    border: 2px solid lightslategrey;
+    border-radius: 5px;
+    height: 250px;
+    width: auto;
   }
   
+
   
