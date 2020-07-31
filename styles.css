@@ -1,0 +1,44 @@
+body {
+    display:grid;
+    grid-template-columns: 500px auto 500px;
+    grid-template-rows: 100px 700px auto;
+    grid-gap: 1em;
+    
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  body * {
+    background: black;
+    color: darkgrey;
+    border: 2px solid lightslategrey;
+    border-radius: 5px;
+  }
+  
+  header, footer {
+    grid-column: 1 / 4;
+    background: rgb(51, 2, 12);
+  }
+  
+  main {
+  }
+  
+  footer {
+  }
+  
+  .left{
+    background: rgb(52, 58, 55);
+    color: darkgrey;
+  }
+  
+  .right {
+    background: rgb(52, 58, 55);
+    color: darkgrey;
+  }
+  
+  
