@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const HousesModel = require('../models').Houses;
+const HousesModel = require('../models').houses;
 
 //show all route (index)
 router.get('/', (req, res) => {
