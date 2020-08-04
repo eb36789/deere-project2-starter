@@ -2,10 +2,9 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('Houses', [
+    await queryInterface.bulkInsert('houses', [
       {
-     db_id: 1,
-     _id: "5a05e2b252f721a3cf2ea33f",
+     id: "5a05e2b252f721a3cf2ea33f",
       name: "Gryffindor",
       mascot: "lion",
       headOfHouse: "Minerva McGonagall",
@@ -66,8 +65,7 @@ module.exports = {
       ]
       },
       {
-        db_id: 2,
-     _id: "5a05da69d45bd0a11bd5e06f",
+     id: "5a05da69d45bd0a11bd5e06f",
       name: "Ravenclaw",
       mascot: "eagle",
       headOfHouse: "Fillius Flitwick",
@@ -105,8 +103,8 @@ module.exports = {
       ]
       },
       {
-        db_id: 3,
-     _id: "5a05dc8cd45bd0a11bd5e071",
+    
+     id: "5a05dc8cd45bd0a11bd5e071",
       name: "Slytherin",
       mascot: "serpent",
       headOfHouse: "Severus Snape",
@@ -151,8 +149,7 @@ module.exports = {
       ]
       },
       {
-        db_id: 4,
-     _id: "5a05dc58d45bd0a11bd5e070",
+       id: "5a05dc58d45bd0a11bd5e070",
       name: "Hufflepuff",
       mascot: "badger",
       headOfHouse: "Pomona Sprout",

@@ -3,20 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/public/styles.css" />
+    <link rel="stylesheet" href="/styles.css">
     <title>All characters</title>
   </head>
   <body>
-    <a href="/characters/new">Check out the members that attend Hogwarts</a>
-    <h1>Who is at Hogwarts?</h1>
+  
+    <h1>Who might you find at Hogwarts?</h1>
     <ul class="characters">
       <% for (let i = 0; i < characters.length; i++) { %>
       <li><a href="/characters/<%= characters[i].id%>"><%= characters[i].name %></a></li>
       <img src="<%= characters[i].img%>" alt="" />
-      <form action="/characters/<%=characters[i].id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete" />
+
       </form>
-      <a href="/characters/<%=characters[i].id%>/edit">Edit</a>
+
       <br /><br />
       <% } %>
     </ul>

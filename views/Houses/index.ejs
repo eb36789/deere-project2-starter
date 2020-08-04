@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css">
+    <title>All houses</title>
+  </head>
+  <body>
+  
+    <h1>The houses of Hogwarts?</h1>
+    <ul class="Houses">
+      <% for (let i = 0; i < houses.length; i++) { %>
+      <li><a href="/houses/<%= houses[i].id%>"><%= houses[i].name %></a></li>
+      <img src="<%= houses[i].img%>" alt="" />
+
+      </form>
+
+      <br /><br />
+      <% } %>
+    </ul>
+  </body>
+</html>
