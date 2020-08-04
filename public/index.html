@@ -4,32 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Want to learn more about Harry Potter?</title>
+    <title>Project 2</title>
   </head>
 <body>
    
-    <header>Welcome muggle!<br>  Are you ready to learn more about Hogwarts School of Witchcraft and Wizardry?<br>
-    2 buttons on right 1)login 2) signup</header>
+    <header>Welcome muggle to Hogwarts School of Witchcraft and Wizardry!<br><br>
+    <div class="topnav">
+        <form action="/action_page.php">
+          <button type="submit" >Login</button> <br>or<br>
+          <button type="submit" >Sign up!</button>
+        </form>
+    </div> <br></header>
 
-  <section class="left">The Houses<br><br>
+  <section class="left">The houses of Hogwarts<br><br>
     <img src="images/four_houses.jpg" alt="image of the four house emblems">
     <br><br>
-    need to hyperlink house image so that clicking updates here (OR goes to new page) and displays house info including house members
+    Click a house shield to learn more about the house:
+    <ul>
+      <li>mascot</li>
+      <li>values</li>
+      <li>colors</li>
+      <li>members</li>
+      <li>head</li>
+      <li>resident ghost</li>
+      <li>founder</li>
+      
+    </ul>
   </section>
   
-  <main>What house do you belong in<br><br>
-    <img src="images/sorting_hat.gif" alt="image of the sorting hat">
+  <main>
     <br><br>
-    clicking here will initiate a function that will call the /sortingHat api to return a random house and display house name here
+    <img src="images/sorting_hat.gif" alt="image of the sorting hat"><br><br>
+    What house do you belong in?<br><br>click the sorting hat to see!
+    <h6>clicking here will:<br>
+      1. call the /sortingHat api to return a random house<br>
+      2. display house name here</h6>
 </main>
   
-  <section class="right">The students<br><br>
+  <section class="right">The students of Hogwarts<br><br>
     <img src="images/hogwarts_wallpaper.jpg" alt="image of Hogwarts"><br><br>
-    2 buttons here<br>
-     a)learn about a random character<br>
-    (clicking here will go to a new page and initiate a function that will call the /characters/{characterId} api to return a random character)
-b) see all characters<br>
-(clicking here will got to a new page and initiate a function that will call the /characters api to return all character info)
+    Click Hogwarts to see all characters 
+    <h6>clicking here will:<br>
+      1. go to a new page <br>
+      2. call the /characters api to return all character info</h6>
+    or<br>
+   Learn about a random character
+    <h6>clicking here will:<br>
+      1. go to a new page <br>
+      2. call the /characters/{characterId} api to return a random character</h6>
+
 </section>
   <footer>made with love for Wyatt Freeman 2020</footer>
   </body>

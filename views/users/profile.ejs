@@ -9,7 +9,9 @@
 
   <body>
     <h1>Welcome to <%= user.name %>'s Profile Page</h1>
-
+    <%if (user.house){ %>
+      <h3> You are a proud member of house: <%= user.house.name%></h3>
+     <%}%>
     <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
       Name: <input type="text" name="name" value="<%=user.name%>" /><br />
       <br />

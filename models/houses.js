@@ -17,9 +17,16 @@ module.exports = (sequelize, DataTypes) => {
 
   
   House.init({
+    _id: DataTypes.STRING,
     name: DataTypes.STRING,
-    img: DataTypes.STRING,
-    playerId: DataTypes.INTEGER,
+    mascot: DataTypes.STRING,
+    headOfHouse: DataTypes.STRING,
+    houseGhost: DataTypes.STRING,
+    founder: DataTypes.STRING,
+    school: DataTypes.STRING,
+    members: DataTypes.STRING,
+    values: DataTypes.STRING,
+    colors: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Houses',

@@ -15,10 +15,24 @@ module.exports = (sequelize, DataTypes) => {
   }
   
   Character.init({
-    name: DataTypes.STRING,
-    img: DataTypes.STRING,
-    characterId: DataTypes.INTEGER,
-  }, {
+_id: DataTypes.STRING,
+name: DataTypes.STRING,
+house: DataTypes.STRING,
+school: DataTypes.STRING,
+ministryOfMagic: DataTypes.BOOLEAN,
+orderOfThePhoenix: DataTypes.BOOLEAN,
+dumbledoresArmy: DataTypes.BOOLEAN,
+deathEater: DataTypes.BOOLEAN,
+bloodStatus: DataTypes.STRING,
+species: DataTypes.STRING,
+patronus: DataTypes.STRING,
+role: DataTypes.STRING,
+alias: DataTypes.STRING,
+wand: DataTypes.STRING,
+boggart: DataTypes.STRING,
+animagus: DataTypes.STRING
+
+      }, {
     sequelize,
     modelName: 'Characters',
   });

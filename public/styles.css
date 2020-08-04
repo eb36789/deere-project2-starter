@@ -1,3 +1,11 @@
+.topnav{
+  float: right;
+  }
+
+  button{
+    color: black;
+    background: black
+  }
 body {
     background: black;
 
@@ -16,9 +24,9 @@ body {
     box-sizing: border-box;
   }
   body * {
-    color: rgb(245, 245, 220);
-    border: 2px solid lightslategrey;
-    border-radius: 5px;
+    color: rgb(203, 203, 203);
+    /*border: 2px solid lightslategrey;
+    border-radius: 5px;*/
   }
   
     header, footer {
@@ -32,6 +40,10 @@ body {
   }
   
   footer {
+    background-image: url("images/plainblack.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column: 1 / 4;
   }
   
   .left{
