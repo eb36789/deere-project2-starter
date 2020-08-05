@@ -3,10 +3,18 @@
     <head>
         <meta charset="utf-8">
         <title>Houses show page</title>
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/housestyles.css">
     </head>
     <body>
-        <h1>Houses show page</h1>
-        Welcome to <%= house.name %>.
-       </body>
+        <h1>Welcome to <%= house.name %></h1>
+        <div>
+        The house values are <%= house.values %><br><br>
+        The house colors are <%= house.colors %><br><br>
+        The house mascot is a <%= house.mascot %><br><br>
+        The head of house is <%= house.headOfHouse %><br><br>
+        The house ghost is <%= house.houseGhost %><br><br>
+        The house founder is <%= house.founder %><br><br>
+        The house members are <%= house.members %><br><br>
+    </div>
+ </body>
 </html>    

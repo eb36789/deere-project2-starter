@@ -1,0 +1,10 @@
+body {
+    background-image: url("images/ravenclawbackground.jpeg");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover; 
+    height: 800px;
+    color:white;
+    font-size: 30px;
+   }

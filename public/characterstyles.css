@@ -1,0 +1,27 @@
+html {
+    background: url("/images/solemnlyswear.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:rgb(203, 203, 203);
+       }
+
+a:link {
+    color: rgb(203, 203, 203);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: goldenrod;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color:goldenrod;
+  }
+  
+  /* selected link */
+  a:active {
+    color:goldenrod;
+  }
