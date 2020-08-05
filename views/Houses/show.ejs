@@ -16,5 +16,9 @@
         The house founder is <%= house.founder %><br><br>
         The house members are <%= house.members %><br><br>
     </div>
+    <form action="user/addtofavorites" method="POST">
+        <input type="hidden" value=<%= house.id %> name="houseId"/>
+        <button type="submit" >Add to your favorites!</button>
+    </form>
  </body>
 </html>    

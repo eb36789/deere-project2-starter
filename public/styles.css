@@ -58,6 +58,25 @@ body {
     height: 250px;
     width: auto;
   }
+
+  a:link {
+    color: goldenrod;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: goldenrod;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color:goldenrod;
+  }
+  
+  /* selected link */
+  a:active {
+    color:goldenrod;
+  }
   
 
   

@@ -11,14 +11,21 @@
     <header>
       Welcome muggle to Hogwarts School of Witchcraft and Wizardry!  
       <div class="topnav">
-        <button type="submit" >Login</button> <br>or<br>
+        <a href="/auth/login">
+        <button type="submit" >Login</button>
+      </a>
+      <br>or<br>
+      <a href="/auth/signup">
         <button type="submit" >Sign up!</button>
+      </a>
       </form>
   </div><br><br>
    <br></header>
 
   <section class="left">The houses of Hogwarts<br><br>
+    <a href="http://localhost:3000/houses">
     <img src="images/four_houses.jpg" alt="image of the four house emblems">
+  </a>
     <br><br>
     Click a house shield to learn more about the house:
     <ul>
@@ -35,25 +42,17 @@
   
   <main>
     <br><br>
+    <a href="https://www.potterapi.com/v1/sortinghat">
     <img src="images/sorting_hat.gif" alt="image of the sorting hat"><br><br>
+  </a>
     What house do you belong in?<br><br>click the sorting hat to see!
-    <h6>clicking here will:<br>
-      1. call the /sortingHat api to return a random house<br>
-      2. display house name here</h6>
 </main>
   
   <section class="right">The students of Hogwarts<br><br>
+    <a href="http://localhost:3000/characters">
     <img src="images/hogwarts_wallpaper.jpg" alt="image of Hogwarts"><br><br>
-    Click Hogwarts to see all characters 
-    <h6>clicking here will:<br>
-      1. go to a new page <br>
-      2. call the /characters api to return all character info</h6>
-    or<br>
-   Learn about a random character
-    <h6>clicking here will:<br>
-      1. go to a new page <br>
-      2. call the /characters/{characterId} api to return a random character</h6>
-
+  </a>
+    Click Hogwarts to see all characters <br>
 </section>
   <footer>made with love for Wyatt Freeman 2020</footer>
   </body>

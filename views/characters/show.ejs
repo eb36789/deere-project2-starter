@@ -10,7 +10,7 @@
     <h1>~<%= character.name %>~</h1>
     <ul class="Check out this character">
     <li>is <%= character.species %> with a blood status of <%= character.bloodStatus %> </li>
-    <li>is a <%= character.role %> at <%= character.school %></li>
+    <li>is a <%= character.role %> at <%= character.school %>in <%=character.house%> house.</li>
       <li>is a member of the Ministry of Magic <%= character.ministryOfMagic %></li>
       <li>is a member of the Order of the Phoenix <%= character.orderOfThePhoenix %></li>
       <li>is a member of Dumbledore's Army <%= character.dumbledoresArmy %></li>
@@ -22,8 +22,11 @@
       <li>Boggart -  <%= character.boggart %></li>
       <li>Animagus -  <%= character.animagus %></li>
     </ul>
-    <form action="/characters/<%= character.id %>?_method=DELETE" method="POST">
-        </form>
+    <form action="/users/addtofavorites" method="POST">
+        <input type="hidden" value=<%= character.id %> name="characterId"/>
+        <input type="hidden" value=<%= character.house %> name="houseId"/>
+        <button type="submit" >Add to your favorites!</button>
+    </form>
     <a href="/characters/">Check out all characters</a>
     <br /><br />
   </body>

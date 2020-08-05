@@ -4,13 +4,14 @@ const app = express();
 const methodOverride = require("method-override");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
-
+app.use(cookieParser());
 const verifyToken = (req, res, next) => {
   let token = req.cookies.jwt;
   // COOKIE PARSER GIVES YOU A .cookies PROP, WE NAMED OUR TOKEN jwt
 
   console.log("Cookies: ", req.cookies.jwt);
 
+  
   jwt.verify(token, process.env.JWT_SECRET, (err, decodedUser) => {
     if (err || !decodedUser) {
       return res.status(401).json({ error: "Unauthorized Request" });
@@ -33,7 +34,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", require("./controllers/authController.js"));
-app.use("/users", require("./controllers/usersController.js"));
+app.use("/users",verifyToken, require("./controllers/usersController.js"));
 app.use("/houses", require("./controllers/housesController.js"));
 app.use("/characters", require("./controllers/charactersController.js"));
 

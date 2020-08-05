@@ -11,13 +11,9 @@
     <h1>The houses of Hogwarts</h1>
     <ul class="Houses">
       <% for (let i = 0; i < houses.length; i++) { %>
-      <li><a href="/houses/<%= houses[i].id%>"><%= houses[i].name %></a></li>
-      <img src="<%= houses[i].img%>" alt="" />
-
-      </form>
-
+      <a href="/houses/<%= houses[i].id%>"><%= houses[i].name %></a>
       <br /><br />
       <% } %>
-    </ul>
+      </ul>
   </body>
 </html>
