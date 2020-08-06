@@ -10,8 +10,8 @@
   <body>
     <div style="background-image: url('/public/images/solemnlyswear.jpg');"></div>
     <h1>Welcome to <%= user.name %>'s Profile Page</h1>
-    <%if (user.house){ %>
-      <h3> You are a proud member of house: <%= user.house%></h3>
+    <%if (user.House){ %>
+      <h3> You are a proud member of house: <%= user.House%></h3>
      <%}%>
      <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
       <h5>Make sure your house is up to date!</h5>
@@ -42,6 +42,8 @@
     </form>
   </div> 
     <br /><br />
+  <div>Check out your list of favorites so far:</div><br><br>
+
   <div class = 'navlinks'> 
     <a href="/">Back to Homepage</a><br>
     <a href='/houses/'>Go check out the Houses page</a><br>
