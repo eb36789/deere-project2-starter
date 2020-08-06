@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const HousesModel = require('../models').houses;
+const CharactersModel = require('../models').characters;
 
 //show all route (index)
 router.get('/', (req, res) => {
@@ -13,10 +14,13 @@ router.get('/', (req, res) => {
 
 //show one route (index)
   router.get('/:id', (req, res) => {
-    HousesModel.findByPk(req.params.id).then(singleHouse=> {
-    res.render('houses/show.ejs',{
-      house: singleHouse 
-  });
+    HousesModel.findByPk(req.params.id, {
+      include: [{model: CharactersModel}]
+    }).then(singleHouse=> {
+      res.send(singleHouse)
+  //   res.render('houses/show.ejs',{
+  //     house: singleHouse 
+  // });
 });
 });
 
