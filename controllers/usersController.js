@@ -26,8 +26,7 @@ router.get("/profile/:id", (req, res) => {
 router.put('/profile/:id', (req, res) => {
   user.update(req.body, {
       where: {id: req.params.id}}).then((updatedUser) => {
-        console.log(updatedUser)
-          res.redirect(`/users/profile/${req.params.id}`);
+        res.redirect(`/users/profile/${req.params.id}`);
 });
 });
 
@@ -38,6 +37,14 @@ router.post('/addtofavorites', (req, res) => {
     res.redirect(`/users/profile/${req.user.id}`)
   });
 })
+
+//delete user route
+router.delete("/profile/:id", (req, res) => {
+  user.destroy({where: { id:req.params.id}}).then(() => {
+    console.log(res.send);
+  res.redirect("/");
+});
+});
 
 router.delete('/:id', (req, res) => {
   userFavoritesModel.destroy({where: { id:req.params.id}}).then(() => {
