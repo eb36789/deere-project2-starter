@@ -38,6 +38,12 @@ router.post('/addtofavorites', (req, res) => {
   });
 })
 
+router.delete('/profile/:id', (req, res) => {
+  userFavoritesModel.destroy({where: { id:req.params.id}}).then(() => {
+   res.redirect(`/users/profile/${req.user.id}`);
+  });
+});
+
 //delete user route
 router.delete("/profile/:id", (req, res) => {
   user.destroy({where: { id:req.params.id}}).then(() => {
@@ -46,10 +52,6 @@ router.delete("/profile/:id", (req, res) => {
 });
 });
 
-router.delete('/:id', (req, res) => {
-  userFavoritesModel.destroy({where: { id:req.params.id}}).then(() => {
-   res.redirect(`/users/profile/${req.user.id}`);
-  });
-});
+
 
 module.exports = router;

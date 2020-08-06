@@ -4,21 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Profile Page</title>
-    <link rel="stylesheet" type="text/css" href="/userstyles.css" />
+   <link rel="stylesheet" type="text/css" href="/userstyles.css" />
   </head>
 
   <body>
     <div style="background-image: url('/public/images/solemnlyswear.jpg');"></div>
     <h1>Welcome to <%= user.name %>'s Profile Page</h1>
-    <%if (user.House){ %>
-      <h3> You are a proud member of house: <%= user.House%></h3>
+    <%if (user.house){ %>
+      <h4> You are a proud member of house: <%= user.house%></h4>
      <%}%>
      <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
       <h5>Make sure your house is up to date!</h5>
         <select name="house">
-          <option value="Slytherin">Gryffindor</option>;
-          <option value="Slytherin">Hufflepuff</option>;
-          <option value="Slytherin">Ravenclaw</option>;
+          <option value="no house">update house here</option>;
+          <option value="Gryffindor">Gryffindor</option>;
+          <option value="Hufflepuff">Hufflepuff</option>;
+          <option value="Ravenclaw">Ravenclaw</option>;
           <option value="Slytherin">Slytherin</option>;
           </select>
           <br></br>

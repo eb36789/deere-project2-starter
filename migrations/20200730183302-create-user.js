@@ -18,6 +18,10 @@ module.exports = {
       password: {
         type: Sequelize.STRING,
       },
+      house: {
+        type: Sequelize.STRING,
+        defaultValue: "no house"
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
