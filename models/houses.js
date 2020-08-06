@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    // static associate(models) {
-    // houses.hasMany(models.characters, { foreignKey: 'house' });
-    // }
+    static associate(models) {
+    houses.hasMany(models.characters, { foreignKey: 'house' });
+    }
   };
   houses.init({
     name: DataTypes.STRING,
@@ -20,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
     houseGhost: DataTypes.STRING,
     founder: DataTypes.STRING,
     school: DataTypes.STRING,
-    members: DataTypes.STRING,
     values: DataTypes.STRING,
     colors: DataTypes.STRING
   }, {

@@ -21,12 +21,18 @@
       <li>Alias -  <%= character.alias %></li>
       <li>Boggart -  <%= character.boggart %></li>
       <li>Animagus -  <%= character.animagus %></li>
+      <img src="<%= character.imageurl%>" alt="character image"/>
+
     </ul>
     <form action="/users/addtofavorites" method="POST">
         <input type="hidden" value=<%= character.id %> name="characterId"/>
         <input type="hidden" value=<%= character.house %> name="houseId"/>
         <button type="submit" >Add to your favorites!</button>
-    </form>
+         </form>
+         <form action="/characters/addurltocharacter/<%=character.id%>?_method=PUT" method="POST">
+            <input type="url" name="imageurl"/>
+            <button type="submit" >add a URL for the best image for this character!</button>
+             </form>
     <a href="/characters/">Check out all characters</a>
     <br /><br />
   </body>

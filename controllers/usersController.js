@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
+const housesModel = require("../models").houses;
 const UserModel = require("../models").User;
 const userFavoritesModel = require('../models').userFavorites;
+const charactersModel = require("../models").characters;
 
 // GET USERS PROFILE
 router.get("/profile/:id", (req, res) => {
-  UserModel.findByPk(req.params.id, {
-    include: [{model: HousesModel }, { model: CharactersModel }],
-    }).then((userProfile) => {
-      HousesModel.findAll().then((allHouses) => {
+  UserModel.findByPk(req.params.id).then((userProfile) => {
+      housesModel.findAll().then((allHouses) => {
         console.log(userProfile);
       
     res.render("users/profile.ejs", {

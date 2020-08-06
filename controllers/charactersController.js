@@ -20,5 +20,10 @@ router.get('/', (req, res) => {
 });
 });
 
+router.put('/addurltocharacter/:id', (req, res) => {
+  CharactersModel.update(req.body, {where: {id: req.params.id}}).then((updatedURL)=>
+  {res.redirect(`/characters/${req.params.id}`)})
+})
+
 
 module.exports = router;
