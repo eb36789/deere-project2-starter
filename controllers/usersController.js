@@ -6,9 +6,16 @@ const userFavoritesModel = require('../models').userFavorites;
 
 // GET USERS PROFILE
 router.get("/profile/:id", (req, res) => {
-  UserModel.findByPk(req.params.id).then((userProfile) => {
+  UserModel.findByPk(req.params.id, {
+    include: [{model: HousesModel }, { model: CharactersModel }],
+    }).then((userProfile) => {
+      HousesModel.findAll().then((allHouses) => {
+        console.log(userProfile);
+      
     res.render("users/profile.ejs", {
       user: userProfile,
+      houses: allHouses,
+      })
     });
   });
 });

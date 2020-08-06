@@ -11,8 +11,18 @@
     <div style="background-image: url('/public/images/solemnlyswear.jpg');"></div>
     <h1>Welcome to <%= user.name %>'s Profile Page</h1>
     <%if (user.house){ %>
-      <h3> You are a proud member of house: <%= user.house.name%></h3>
+      <h3> You are a proud member of house: <%= user.house%></h3>
      <%}%>
+     <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
+      <h5>Make sure your house is up to date!</h5>
+        <select name="house">
+          <option value="Slytherin">Gryffindor</option>;
+          <option value="Slytherin">Hufflepuff</option>;
+          <option value="Slytherin">Ravenclaw</option>;
+          <option value="Slytherin">Slytherin</option>;
+          </select>
+          <br></br>
+          <br><br />
      <div class = "form">
     <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
       Name: <input type="text" name="name" value="<%=user.name%>" /><br />
