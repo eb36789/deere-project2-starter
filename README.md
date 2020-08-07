@@ -35,13 +35,16 @@ As a user, I want to be able to add characters to my favorites list.
 As a user, I want to be able to enhance the information available to add additional detail.
 
 ## known bugs/future enhancements
-fix return on sorting hat API
+add Harry Potter font
 
-prettify the site through CSS
+fix return on sorting hat API
 
 when there is no information available (null), hide those values
 
 return character last name and image on favorites page also
+
+prettify the site through CSS e.g. house specific pictures on house show pages
+
 
 ## thanks to...
 
