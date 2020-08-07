@@ -17,6 +17,9 @@ module.exports = {
       houseId: {
         type: Sequelize.STRING
       },
+     characterName: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         defaultValue: new Date(),
         allowNull: false,

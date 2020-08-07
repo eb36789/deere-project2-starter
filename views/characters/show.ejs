@@ -25,8 +25,9 @@
 
     </ul>
     <form action="/users/addtofavorites" method="POST">
-        <input type="hidden" value=<%= character.name %> name="characterId"/>
+        <input type="hidden" value=<%= character.id %> name="characterId"/>
         <input type="hidden" value=<%= character.house %> name="houseId"/>
+        <input type="hidden" value=<%= character.name %> name="characterName"/>
         <button type="submit" >Add to your favorites!</button>
          </form>
          <form action="/characters/addurltocharacter/<%=character.id%>?_method=PUT

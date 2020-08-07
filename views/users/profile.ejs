@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Profile Page</title>
-   <link rel="stylesheet" type="text/css" href="/userstyles.css" />
+   <!-- <link rel="stylesheet" type="text/css" href="/userstyles.css" /> -->
   </head>
 
   <body>
@@ -43,7 +43,13 @@
   </div> 
     <br /><br />
   <div>Check out your list of favorites so far:</div><br><br>
-
+  <% for (let i = 0; i < favorites.length; i++) { %>
+    <li><a href="/characters/<%= favorites[i].characterId%>"><%= favorites[i].characterName %></a></li>
+    <form action="/users/deletefav/<%=favorites[i].id%>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete" />
+    </form>
+    <% } %> 
+    
   <div class = 'navlinks'> 
     <a href="/">Back to Homepage</a><br><br>
     <a href='/houses/'>Go check out the Houses page</a><br><br>

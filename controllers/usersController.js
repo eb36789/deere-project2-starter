@@ -9,18 +9,16 @@ const charactersModel = require("../models").characters;
 // GET USERS PROFILE
 router.get("/profile/:id", (req, res) => {
   user.findByPk(req.params.id).then((userProfile) => {
-      housesModel.findAll().then((allHouses) => {
-        userFavoritesModel.findAll().then((allFavorites) => {
-        console.log(userProfile);
-      
+        userFavoritesModel.findAll({where: {userId:req.params.id}}).then((allFavorites) => {
+        // console.log(userProfile);
+        // res.send(allFavorites)
     res.render("users/profile.ejs", {
       user: userProfile,
-      houses: allHouses,
       favorites: allFavorites})
       })
     });
   });
-});
+
 
 //user profile edit route
 router.put('/profile/:id', (req, res) => {
@@ -38,7 +36,7 @@ router.post('/addtofavorites', (req, res) => {
   });
 })
 
-router.delete('/profile/:id', (req, res) => {
+router.delete('/deletefav/:id', (req, res) => {
   userFavoritesModel.destroy({where: { id:req.params.id}}).then(() => {
    res.redirect(`/users/profile/${req.user.id}`);
   });
