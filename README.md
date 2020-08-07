@@ -41,7 +41,7 @@ prettify the site through CSS
 
 when there is no information available (null), hide those values
 
-return character last name on favorites page also
+return character last name and image on favorites page also
 
 ## thanks to...
 
