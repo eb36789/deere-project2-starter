@@ -14,7 +14,6 @@
       <h4> You are a proud member of house: <%= user.house%></h4>
      <%}%>
      <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
-      <h5>Make sure your house is up to date!</h5>
         <select name="house">
           <option value="no house">update house here</option>;
           <option value="Gryffindor">Gryffindor</option>;
@@ -46,9 +45,9 @@
   <div>Check out your list of favorites so far:</div><br><br>
 
   <div class = 'navlinks'> 
-    <a href="/">Back to Homepage</a><br>
-    <a href='/houses/'>Go check out the Houses page</a><br>
-    <a href='/characters/'>Go check out the characters page</a><br>
+    <a href="/">Back to Homepage</a><br><br>
+    <a href='/houses/'>Go check out the Houses page</a><br><br>
+    <a href='/characters/'>Go check out the characters page to add them to your favorites</a><br>
   </div> 
   </body>
 </html>

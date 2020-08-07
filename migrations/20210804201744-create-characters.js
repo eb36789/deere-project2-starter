@@ -1,7 +1,5 @@
 'use strict';
-
 const houses = require("../models/houses");
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('characters', {
@@ -13,12 +11,15 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      house: {
+      house:{
+        type: Sequelize.STRING
+      },
+      houseId: {
         type: Sequelize.STRING,
-        // references: {
-        //   model:'houses',
-        //   name: 'name'
-        // }
+        references: {
+          model:'houses',
+          key: 'id'
+        }
       },
       school: {
         type: Sequelize.STRING

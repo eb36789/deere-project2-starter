@@ -4,11 +4,11 @@ module.exports = {
     await queryInterface.createTable('houses', {
       id: {
         allowNull: false,
+        primaryKey: true,
         type: Sequelize.STRING
       },
       name: {
         type: Sequelize.STRING,
-        primaryKey: true,
       },
       mascot: {
         type: Sequelize.STRING

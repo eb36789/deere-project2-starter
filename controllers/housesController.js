@@ -17,10 +17,10 @@ router.get('/', (req, res) => {
     HousesModel.findByPk(req.params.id, {
       include: [{model: CharactersModel}]
     }).then(singleHouse=> {
-      res.send(singleHouse)
-  //   res.render('houses/show.ejs',{
-  //     house: singleHouse 
-  // });
+      // res.send(singleHouse)
+    res.render('houses/show.ejs',{
+      house: singleHouse 
+  });
 });
 });
 
