@@ -14,7 +14,13 @@
         The head of house is <%= house.headOfHouse %><br><br>
         The house ghost is <%= house.houseGhost %><br><br>
         The house founder is <%= house.founder %><br><br>
-        The house members are <%= house.members %><br><br>
+        The house members are 
+        <% for (let i = 0; i < house.characters.length; i++) { %>
+            <li><a href="/characters/<%=house.characters[i].id%>"><%= house.characters[i].name %></a></li>
+            <img src="<%= house.characters[i].imageurl%>" alt="" />
+            <br /><br />
+            <% } %>
+            <br><br>
     </div>
     <form action="user/addtofavorites" method="POST">
         <input type="hidden" value=<%= house.id %> name="houseId"/>
