@@ -4,18 +4,8 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class characters extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
+      static associate(models) {
        characters.belongsTo(models.houses, { foreignKey: "houseId", as:'House' });
-  //   // characters.belongsToMany(models.user, {
-  //   //   through: 'userFavorites',
-  //   //   foreignKey: 'userId',
-  //   //   otherKey: 'characterId'
-  //   // });
   };
 }
   characters.init({
