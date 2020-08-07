@@ -36,8 +36,12 @@ As a user, I want to be able to enhance the information available to add additio
 
 ## known bugs/future enhancements
 fix return on sorting hat API
+
 prettify the site through CSS
+
 when there is no information available (null), hide those values
+
+return character last name on favorites page also
 
 ## thanks to...
 
