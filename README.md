@@ -1,5 +1,5 @@
 ## Who is Who at Hogwarts
-This application was developed for my children who love Harry Potter.  It is an opportunity to learn more about the wizarding world and Hogwarts School of Witchcraft and Wizardry.  A user can het more details about the 
+This application was developed for my children who love Harry Potter.  It is an opportunity to learn more about the wizarding world and Hogwarts School of Witchcraft and Wizardry.  A user can learn fun facts about the houses at Hogwarts or the characters from the movies.  The user can favorite information and add it to their personal profile.
 
 ## Technologies used
 1. Node.js
